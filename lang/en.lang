@@ -1,0 +1,37 @@
+<?php
+include '_conn.php';
+// English file
+$head="The service provides shorten the URL service, providing you the shortest URL, no ads, free high efficiency! Also supports shorten the Chinese website, short URL is your best choice!";
+$title=$weburl2." short URL | home";
+$txt="Enter the URL to shorten";
+$txt2="Shorten ...";
+$txt3="Enter the URL to shorten";
+$txt4="URL is malformed";
+$txt5="The URL is too short !!";
+$txt6="short URL:";
+$h1=$weburl2." <small>short URL</small>";
+$h2="Remove the excess, leaving the best";
+$shurl="Enter the URL to be shortened below (http、https、ftp)";
+$delurl="Delete short URL:";
+$s="shortened";
+$again="again";
+$cc="Terms of Service";
+$email="Report a problem - ";
+$del_s = "Delete success!";
+$del_e = "Delete error may not have this URL or has been deleted!";
+$time="Wait time:";
+$suc="awesome! Successfully shortened a URL.";
+$donate=" Sponsor our a can of drinks";
+$online="Website on-line status";
+$close="Close";
+
+$cc_text="1. The wurl.ga Short URL Service (hereinafter referred to as the Service) is the copyright of William. </br></br>
+2. Welcome to use this service, but do not abuse or interfere with the operation of the service, the administrator has the right to remove any address URL. </br></br>
+3. The administrator has the right to stop the service, the user has no right to claim any damages. </br></br>
+4. If the shortened URL contains a virus, the administrator will permanently block the link. </br></br>
+5. The contents of the transposition should not violate the laws of the Republic of China or the user. </br></br>
+6. This access service can connect to a commercial website, but can not sell this short URL to earn any benefits. </br></br>
+7. The Service will not record any information about you, but will retain the URL to which it is linked. </br></br>
+8. The Privacy Policy of this Service will be amended upon request at any time, and the amended terms will be posted on this page. </br></br>
+9. Users may not reproduce or sell the Service. </br></br>";
+$doc="Docs";

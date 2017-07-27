@@ -1,0 +1,48 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule ^([a-zA-Z0-9_-]+)$ _goto.php?u=$1 [L]
+
+   RewriteRule ^([a-zA-Z0-9_-]+)\.info$ _info.php?id=$1
+
+   RewriteRule ^([a-z]+)\/$ ?l=$1
+   ErrorDocument 404 /404.php
+   RewriteOptions MaxRedirects=1
+   RewriteBase /
+	RewriteCond /index.html?$ [NC]
+	RewriteRule / [R=301,L]
+	RewriteCond /index.php$ [NC]
+	RewriteRule / [R=301,L]
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-l
+   # RewriteRule ^([a-zA-Z0-9_-]+)\.del$ d.php?id=$1
+</IfModule>
+Header unset ETag
+FileETag None
+ 
+#設定檔案過期時間
+<IfModule mod_expires.c>
+#要設定的檔案類型
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|gz)$">
+ExpiresActive On
+#604800秒=1週
+ExpiresDefault A604800
+</FilesMatch>
+</IfModule>
+ 
+#設定檔案快取時間
+<IfModule mod_headers.c>
+#要設定的檔案類型
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|gz)$">
+#604800秒=1週
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+</IfModule>
+ 
+#壓縮JS和CSS檔
+<IfModule mod_deflate.c>
+<FilesMatch ".(js|css)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+</IfModule>
