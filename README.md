@@ -19,6 +19,14 @@ wurl.ga 短網址原始碼
 
 	php + apache
 
+### 運作結構
+---
+	縮短網址：
+![縮短網址](http://i.imgur.com/Fn5YYCR.png)
+	
+	解析網址：
+![解析網址](http://i.imgur.com/CEpM6NV.png)
+
 ### 授權
 ---
 	MIT License
